@@ -4,8 +4,6 @@ name: Final CI/CD10 Pipeline
 on:
   push:
     branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
 
 jobs:
   build:
@@ -21,5 +19,5 @@ jobs:
         distribution: 'temurin'
         cache: maven
     - name: Build with Maven
-      run: mvn -B -f Week-01/Day-01/pom.xml clean install
+      run: mvn compile
 
